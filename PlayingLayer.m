@@ -98,11 +98,20 @@
 
 -(void)goGameOverLayer
 {
+   id start = [CCCallBlock actionWithBlock:^{
+       [self unscheduleUpdate];
+   }];
     
-    [scoreModel saveBestScore];
-    [[CCDirector sharedDirector] replaceScene:[GameOverLayer scene]];
-    [scoreModel removeObserver:self forKeyPath:@"score"];
-    [scoreModel removeObserver:self forKeyPath:@"life"];
+    id action = [CCShaky3D actionWithRange:3 shakeZ:YES grid:ccg(10,30) duration:0.5];
+    
+    id onEnd = [CCCallBlock actionWithBlock:^{
+        [scoreModel saveBestScore];
+        [[CCDirector sharedDirector] replaceScene:[GameOverLayer scene]];
+        [scoreModel removeObserver:self forKeyPath:@"score"];
+        [scoreModel removeObserver:self forKeyPath:@"life"];
+    }];
+    
+    [self runAction:[CCSequence actions:start,action,onEnd, nil]];
     
 }
 
