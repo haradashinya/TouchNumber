@@ -38,7 +38,6 @@
 }
 -(void)addMenu
 {
-    NSLog(@"called");
     CCLabelTTF *backLabel  = [CCLabelTTF labelWithString:@"Back to Menu" fontName:@"Arial" fontSize:33];
     CCLabelTTF *scoreLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"Score: %i",scoreModel.score] fontName:@"Arial" fontSize:33];
     
@@ -56,6 +55,7 @@
 }
 -(void)onBack
 {
+    [[CCDirector sharedDirector] replaceScene:[HelloWorldLayer scene]];
     
 }
 

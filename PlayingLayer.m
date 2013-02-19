@@ -102,7 +102,7 @@
        [self unscheduleUpdate];
    }];
     
-    id action = [CCShaky3D actionWithRange:3 shakeZ:YES grid:ccg(10,30) duration:0.5];
+    id action = [CCShaky3D actionWithRange:3 shakeZ:YES grid:ccg(10,30) duration:0.1];
     
     id onEnd = [CCCallBlock actionWithBlock:^{
         [scoreModel saveBestScore];

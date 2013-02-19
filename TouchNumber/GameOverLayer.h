@@ -10,6 +10,7 @@
 #import "CCLayer.h"
 #import "cocos2d.h"
 #import "ScoreModel.h"
+#import "HelloWorldLayer.h"
 
 @interface GameOverLayer : CCLayer
 +(CCScene *)scene;
