@@ -29,6 +29,13 @@
 									sharegroup:nil
 								 multiSampling:NO
 							   numberOfSamples:0];
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    if (![ud objectForKey:@"bestScore"]){
+        [ud setObject:@"0" forKey:@"bestScore"];
+        NSLog(@"set");
+    }
+    
 
 	director_ = (CCDirectorIOS*) [CCDirector sharedDirector];
 

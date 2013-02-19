@@ -18,5 +18,16 @@ static ScoreModel *scoreModel;
     
     return scoreModel;
 }
+-(void)saveBestScore
+{
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    if (self.score > [[ud objectForKey:@"bestScore"] intValue]){
+        [ud setObject:[NSString stringWithFormat:@"%i",self.score] forKey: @"bestScore" ];
+        NSLog(@"best score!!!!!");
+    }
+    [ud synchronize];
+    self.bestScore = [[ud objectForKey:@"bestScore"] intValue];
+    
+}
 
 @end

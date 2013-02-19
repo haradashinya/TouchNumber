@@ -96,6 +96,15 @@
     
 }
 
+-(void)goGameOverLayer
+{
+    
+    [scoreModel saveBestScore];
+    [[CCDirector sharedDirector] replaceScene:[GameOverLayer scene]];
+    [scoreModel removeObserver:self forKeyPath:@"score"];
+    [scoreModel removeObserver:self forKeyPath:@"life"];
+    
+}
 
 
 -(void)update:(ccTime *)dt
@@ -116,10 +125,10 @@
                 [self removeChild:ball.sprite cleanup:YES];
                 
                 scoreModel.life -= ball.sprite.tag;
-                if (scoreModel.life > 0){
-                    [[CCDirector sharedDirector] replaceScene:[GameOverLayer scene]];
-                    [scoreModel removeObserver:self forKeyPath:@"score"];
-                    [scoreModel removeObserver:self forKeyPath:@"life"];
+                
+                // for debug
+                if (scoreModel.life < 9){
+                    [self goGameOverLayer];
                 }
                 
                 
