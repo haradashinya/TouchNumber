@@ -31,6 +31,7 @@
 -(void)onEnter
 {
     [super onEnter];
+    NSLog(@"callelelelel");
     scoreModel = [ScoreModel shared];
     scoreModel.score = 0;
     scoreModel.life  = 10;
@@ -40,7 +41,18 @@
     [self addScoreLabel];
     [self addLifeLabel];
     [self scheduleUpdate];
+    [self addBackMenu];
     self.isTouchEnabled = YES;
+}
+-(void)addBackMenu
+{
+    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Back" fontName:@"Arial" fontSize:20];
+    CCMenuItemLabel *menuItem = [CCMenuItemLabel itemWithLabel:label block:^(id sender) {
+        [[CCDirector sharedDirector] replaceScene:[HelloWorldLayer scene]];
+    }];
+    CCMenu *menu = [CCMenu menuWithItems:menuItem, nil];
+    menu.position = ccp(30,430);
+    [self addChild:menu];
 }
 -(void)addScoreLabel
 {
@@ -110,8 +122,6 @@
     id onEnd = [CCCallBlock actionWithBlock:^{
         [scoreModel saveBestScore];
         [[CCDirector sharedDirector] replaceScene:[GameOverLayer scene]];
-        [scoreModel removeObserver:self forKeyPath:@"score"];
-        [scoreModel removeObserver:self forKeyPath:@"life"];
     }];
     
     [self runAction:[CCSequence actions:start,action,onEnd, nil]];
@@ -202,6 +212,10 @@
 -(void)onExit
 {
     [super onExit];
+    NSLog(@"flflflflflflfl");
+    [scoreModel removeObserver:self forKeyPath:@"score"];
+    [scoreModel removeObserver:self forKeyPath:@"life"];
+
 }
 
 @end

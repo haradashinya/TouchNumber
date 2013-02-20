@@ -11,6 +11,7 @@
 #import "Ball.h"
 #import "ScoreModel.h"
 #import "GameOverLayer.h"
+#import "HelloWorldLayer.h"
 
 @interface PlayingLayer : CCLayer
 +(CCScene *) scene;
