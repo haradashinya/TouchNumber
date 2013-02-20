@@ -36,13 +36,13 @@
     self.sprite = [CCLabelTTF labelWithString:ballName fontName:@"Marker Felt" fontSize:120];
     self.sprite.color = ccc3(arc4random() % 255, arc4random() % 255, arc4random() % 255);
     
-    self.sprite.position = ccp(arc4random() % 300,0 );
+    self.sprite.position = ccp(arc4random() % 300,50 );
     self.sprite.tag = [ballName intValue];
     
     
     
     forceX = 0;
-    forceY = arc4random() % 10 + (float )scoreModel.score * 0.1 ;
+    forceY = 3 + arc4random() % 5 + (float )scoreModel.score * 0.1 ;
     return self;
     
 }

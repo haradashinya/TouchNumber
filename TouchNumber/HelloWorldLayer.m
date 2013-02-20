@@ -36,6 +36,8 @@
 -(void)onEnter
 {
     [super onEnter];
+    [[Helper alloc] addAdmobOn:[CCDirector sharedDirector].parentViewController];
+
 
 }
 

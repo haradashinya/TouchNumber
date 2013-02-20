@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06220CC916D4F74B00DA4E0A /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06220CC816D4F74B00DA4E0A /* libGoogleAdMobAds.a */; };
+		06220CCC16D4F88900DA4E0A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06220CCB16D4F88900DA4E0A /* StoreKit.framework */; };
+		06220CCE16D4F89600DA4E0A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06220CCD16D4F89600DA4E0A /* MessageUI.framework */; };
+		06220CD016D4F8A900DA4E0A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06220CCF16D4F8A900DA4E0A /* SystemConfiguration.framework */; };
+		06220CD216D4F8BA00DA4E0A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06220CD116D4F8BA00DA4E0A /* AdSupport.framework */; };
+		06220CDB16D4FA6100DA4E0A /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 06220CDA16D4FA6100DA4E0A /* Helper.m */; };
 		06628BFF16D409310004F0C8 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 06628BFE16D409310004F0C8 /* ball.png */; };
 		06628C0116D409450004F0C8 /* ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06628C0016D409450004F0C8 /* ball@2x.png */; };
 		06628C0816D41CE10004F0C8 /* ScoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06628C0716D41CE10004F0C8 /* ScoreModel.m */; };
@@ -150,6 +156,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06220CBF16D4F74B00DA4E0A /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		06220CC016D4F74B00DA4E0A /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		06220CC116D4F74B00DA4E0A /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		06220CC216D4F74B00DA4E0A /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		06220CC316D4F74B00DA4E0A /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		06220CC416D4F74B00DA4E0A /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		06220CC516D4F74B00DA4E0A /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		06220CC616D4F74B00DA4E0A /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		06220CC716D4F74B00DA4E0A /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		06220CC816D4F74B00DA4E0A /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		06220CCB16D4F88900DA4E0A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		06220CCD16D4F89600DA4E0A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		06220CCF16D4F8A900DA4E0A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		06220CD116D4F8BA00DA4E0A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		06220CD916D4FA6100DA4E0A /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		06220CDA16D4FA6100DA4E0A /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		06628BFE16D409310004F0C8 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 		06628C0016D409450004F0C8 /* ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball@2x.png"; sourceTree = "<group>"; };
 		06628C0616D41CE10004F0C8 /* ScoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreModel.h; sourceTree = "<group>"; };
@@ -438,15 +460,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06220CD216D4F8BA00DA4E0A /* AdSupport.framework in Frameworks */,
+				06220CD016D4F8A900DA4E0A /* SystemConfiguration.framework in Frameworks */,
+				06FCC2CD16D1F17300283A31 /* CoreGraphics.framework in Frameworks */,
+				06220CCE16D4F89600DA4E0A /* MessageUI.framework in Frameworks */,
+				06FCC2C516D1F17300283A31 /* AudioToolbox.framework in Frameworks */,
+				06220CCC16D4F88900DA4E0A /* StoreKit.framework in Frameworks */,
 				06FCC2BF16D1F17300283A31 /* QuartzCore.framework in Frameworks */,
 				06FCC2C116D1F17300283A31 /* OpenGLES.framework in Frameworks */,
 				06FCC2C316D1F17300283A31 /* OpenAL.framework in Frameworks */,
-				06FCC2C516D1F17300283A31 /* AudioToolbox.framework in Frameworks */,
 				06FCC2C716D1F17300283A31 /* AVFoundation.framework in Frameworks */,
 				06FCC2C916D1F17300283A31 /* UIKit.framework in Frameworks */,
 				06FCC2CB16D1F17300283A31 /* Foundation.framework in Frameworks */,
-				06FCC2CD16D1F17300283A31 /* CoreGraphics.framework in Frameworks */,
 				06FCC2CF16D1F17300283A31 /* GameKit.framework in Frameworks */,
+				06220CC916D4F74B00DA4E0A /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +494,22 @@
 		06FCC2AF16D1F17300283A31 = {
 			isa = PBXGroup;
 			children = (
+				06220CD916D4FA6100DA4E0A /* Helper.h */,
+				06220CDA16D4FA6100DA4E0A /* Helper.m */,
+				06220CD116D4F8BA00DA4E0A /* AdSupport.framework */,
+				06220CCF16D4F8A900DA4E0A /* SystemConfiguration.framework */,
+				06220CCD16D4F89600DA4E0A /* MessageUI.framework */,
+				06220CCB16D4F88900DA4E0A /* StoreKit.framework */,
+				06220CBF16D4F74B00DA4E0A /* GADAdMobExtras.h */,
+				06220CC016D4F74B00DA4E0A /* GADAdNetworkExtras.h */,
+				06220CC116D4F74B00DA4E0A /* GADAdSize.h */,
+				06220CC216D4F74B00DA4E0A /* GADBannerView.h */,
+				06220CC316D4F74B00DA4E0A /* GADBannerViewDelegate.h */,
+				06220CC416D4F74B00DA4E0A /* GADInterstitial.h */,
+				06220CC516D4F74B00DA4E0A /* GADInterstitialDelegate.h */,
+				06220CC616D4F74B00DA4E0A /* GADRequest.h */,
+				06220CC716D4F74B00DA4E0A /* GADRequestError.h */,
+				06220CC816D4F74B00DA4E0A /* libGoogleAdMobAds.a */,
 				06C78C6616D45A810095A817 /* GameKitHelper.h */,
 				06C78C6716D45A810095A817 /* GameKitHelper.m */,
 				06628C0616D41CE10004F0C8 /* ScoreModel.h */,
@@ -1083,6 +1126,7 @@
 				06628C0816D41CE10004F0C8 /* ScoreModel.m in Sources */,
 				06628C0E16D422DC0004F0C8 /* GameOverLayer.m in Sources */,
 				06C78C6816D45A810095A817 /* GameKitHelper.m in Sources */,
+				06220CDB16D4FA6100DA4E0A /* Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1139,6 +1183,11 @@
 				GCC_PREFIX_HEADER = TouchNumber/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"TouchNumber/libs/kazmath/include\"";
 				INFOPLIST_FILE = TouchNumber/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -1157,6 +1206,11 @@
 				GCC_PREFIX_HEADER = TouchNumber/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"TouchNumber/libs/kazmath/include\"";
 				INFOPLIST_FILE = TouchNumber/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
