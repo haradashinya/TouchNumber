@@ -27,11 +27,25 @@
     if (arc4random() % 2 == 0)direction *= -1;
     balls = [[NSMutableArray alloc] init];
     [super init];
-    self.sprite = [CCSprite spriteWithFile:@"ball.png"];
-    self.sprite.position = ccp(150 + arc4random() % 20,0 );
-    self.sprite.tag = 1;
-    forceX = arc4random() % 5 + 5;
-    forceY = arc4random() % 5 + 5;
+    NSArray *ballNames = @[@"ball1.png",@"ball2.png",@"ball3.png"];
+    
+    NSString *ballName = [ballNames objectAtIndex:arc4random()%3];
+    
+    
+    self.sprite = [CCSprite spriteWithFile:[ballNames objectAtIndex:arc4random() % 3]];
+    self.sprite.position = ccp(arc4random() % 300,0 );
+    if ([ballName isEqual:@"ball1.png"]){
+        self.sprite.tag = 1;
+    }else if ([ballName isEqual:@"ball2.png"]){
+        self.sprite.tag = 2;
+    }else if ([ballName isEqual:@"ball3.png"]){
+        self.sprite.tag = 3;
+    }
+    
+    
+    
+    forceX = 0;
+    forceY = arc4random() % 10 + 5;
     return self;
     
 }
@@ -47,6 +61,7 @@
 -(void)removeRequest
 {
     [currentLayer removeChild:self.sprite cleanup:YES];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"great.mp3"];
     
 }
 

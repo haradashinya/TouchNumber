@@ -33,6 +33,11 @@
 	// return the scene
 	return scene;
 }
+-(void)onEnter
+{
+    [super onEnter];
+
+}
 
 // on "init" you need to initialize your instance
 -(id) init
@@ -40,6 +45,9 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
+        CCLabelTTF *titleLabel = [CCLabelTTF labelWithString:@"Tap Tap Tap!" fontName:@"Marker Felt" fontSize:50];
+        titleLabel.position = ccp([CCDirector sharedDirector].winSize.width/2,400);
+        [self addChild:titleLabel];
 		
 		// create and initialize a Label
 		CCLabelTTF *startLabel = [CCLabelTTF labelWithString:@"Start" fontName:@"Marker Felt" fontSize:64];
@@ -52,6 +60,9 @@
             [[CCDirector sharedDirector] replaceScene:[PlayingLayer scene]];
         
         }];
+        
+        
+        
 		
 		CCMenu *menu = [CCMenu menuWithItems:startMenu, nil];
 		
@@ -60,10 +71,21 @@
 		
 		// Add the menu to the layer
 		[self addChild:menu];
+        
+        
+        
+        
 
 	}
+    
+    
+    
+    
+    
+    
 	return self;
 }
+
 
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc

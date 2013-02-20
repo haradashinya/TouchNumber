@@ -37,6 +37,7 @@
 -(void) onEnter
 {
 	[super onEnter];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"great.mp3"];
 
 	// ask director for the window size
 	CGSize size = [[CCDirector sharedDirector] winSize];

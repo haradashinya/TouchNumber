@@ -14,8 +14,11 @@
 #import "cocos2d.h"
 
 // HelloWorldLayer
-@interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
+@interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate,GKMatchDelegate>
 {
+    id delegate;
+    bool isGameCenterAvailable;
+    NSError* lastError;
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child

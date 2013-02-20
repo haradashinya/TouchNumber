@@ -62,7 +62,8 @@
 {
     
     balls = [[NSMutableArray alloc] init];
-    for (int i = 0 ; i < 3; i++){
+    int num = arc4random() % 3 + 2;
+    for (int i = 0 ; i < num; i++){
         Ball *ball = [[Ball alloc ]initWithLayer:self];
         [self addChild:ball.sprite];
         [balls addObject:ball];
@@ -77,14 +78,16 @@
     CGPoint location = [touch locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
 
+    NSLog(@"balls count is %@",balls);
     
     if ([balls respondsToSelector:@selector(objectAtIndex:)]){
         for(int i = 0; i < [balls count] ; i++){
             Ball *ball = [balls objectAtIndex:i];
             if (CGRectContainsPoint([ball.sprite boundingBox], location)){
                 scoreModel.score += ball.sprite.tag;
+                NSLog(@"%@", ball.sprite.userData);
                 [balls removeObject:ball];
-                [ball removeRequest];
+                [self removeChild:ball.sprite cleanup:YES];
                 
             }
             
