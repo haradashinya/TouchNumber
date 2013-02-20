@@ -47,7 +47,7 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
-        CCLabelTTF *titleLabel = [CCLabelTTF labelWithString:@"Tap Tap Tap!" fontName:@"Marker Felt" fontSize:50];
+        CCLabelTTF *titleLabel = [CCLabelTTF labelWithString:@"YMTouch" fontName:@"Marker Felt" fontSize:50];
         titleLabel.position = ccp([CCDirector sharedDirector].winSize.width/2,400);
         [self addChild:titleLabel];
 		
