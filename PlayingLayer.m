@@ -31,7 +31,6 @@
 -(void)onEnter
 {
     [super onEnter];
-    NSLog(@"callelelelel");
     scoreModel = [ScoreModel shared];
     scoreModel.score = 0;
     scoreModel.life  = 10;

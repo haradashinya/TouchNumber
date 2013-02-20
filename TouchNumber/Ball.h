@@ -9,6 +9,7 @@
 #import "CCNode.h"
 #import "cocos2d.h"
 #import "SimpleAudioEngine.h"
+#import "ScoreModel.h"
 
 @interface Ball : CCNode
 @property (nonatomic,strong) NSString *state;
