@@ -84,6 +84,7 @@
             Ball *ball = [balls objectAtIndex:i];
             if (CGRectContainsPoint([ball.sprite boundingBox], location)){
                 ball.visible = false;
+                [[SimpleAudioEngine sharedEngine] playEffect:@"great.mp3"];
                 scoreModel.score += ball.sprite.tag;
                 [balls removeObject:ball];
                 [self removeChild:ball.sprite cleanup:YES];
@@ -135,10 +136,13 @@
                 [balls removeObject:ball];
                 [self removeChild:ball.sprite cleanup:YES];
                 
+
+                
                 scoreModel.life -= ball.sprite.tag;
                 
+                
                 // for debug
-                if (scoreModel.life < 9){
+                if (scoreModel.life < 0){
                     [self goGameOverLayer];
                 }
                 
@@ -188,6 +192,10 @@
     }
     if ([keyPath isEqual:@"life"]){
         [self updateLifeLabel];
+        if (scoreModel.life < 4){
+            lifeLabel.color = ccc3(255,0,0);
+            
+        }
     }
     
 }

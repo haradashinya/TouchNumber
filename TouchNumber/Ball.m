@@ -28,23 +28,14 @@
     balls = [[NSMutableArray alloc] init];
     [super init];
     NSArray *ballNames = @[@"1",@"2",@"3",@"4",@"5"];
-    
-    NSString *ballName = [ballNames objectAtIndex:arc4random()%3];
+    NSString *ballName = [ballNames objectAtIndex:arc4random()%5];
     
     self.sprite = [CCLabelTTF labelWithString:ballName fontName:@"Marker Felt" fontSize:120];
+    self.sprite.color = ccc3(arc4random() % 255, arc4random() % 255, arc4random() % 255);
     
 //    self.sprite = [CCSprite spriteWithFile:[ballNames objectAtIndex:arc4random() % 3]];
     self.sprite.position = ccp(arc4random() % 300,0 );
-    if ([ballName isEqual:@"ball1.png"]){
-        self.sprite.tag = 1;
-        self.sprite.rotation = 30;
-    }else if ([ballName isEqual:@"ball2.png"]){
-        self.sprite.tag = 2;
-        self.sprite.rotation = 20;
-    }else if ([ballName isEqual:@"ball3.png"]){
-        self.sprite.tag = 3;
-        self.sprite.rotation = 30;
-    }
+    self.sprite.tag = [ballName intValue];
     
     
     
