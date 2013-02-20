@@ -12,7 +12,7 @@
 
 @interface Ball : CCNode
 @property (nonatomic,strong) NSString *state;
-@property (nonatomic,strong) CCSprite *sprite;
+@property (nonatomic,strong) CCLabelTTF *sprite;
 @property int num;
 -(void)move;
 -(void)removeRequest;

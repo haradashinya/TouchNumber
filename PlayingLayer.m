@@ -78,14 +78,13 @@
     CGPoint location = [touch locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
 
-    NSLog(@"balls count is %@",balls);
     
     if ([balls respondsToSelector:@selector(objectAtIndex:)]){
         for(int i = 0; i < [balls count] ; i++){
             Ball *ball = [balls objectAtIndex:i];
             if (CGRectContainsPoint([ball.sprite boundingBox], location)){
+                ball.visible = false;
                 scoreModel.score += ball.sprite.tag;
-                NSLog(@"%@", ball.sprite.userData);
                 [balls removeObject:ball];
                 [self removeChild:ball.sprite cleanup:YES];
                 
